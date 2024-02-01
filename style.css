@@ -1,0 +1,213 @@
+body {
+  text-align: center;
+  font-family: OCR A Std, monospace;
+  font-variant: small-caps;
+  color: white;
+  background-color: gray;
+}
+
+.container {
+  display: flex;
+}
+.footer{
+  margin-top:auto;
+}
+
+
+.sidebar {
+  position:sticky;
+  top:10px;
+  left:0px;
+  width: 400px;
+  height: fit-content;
+  background-color: #fa7268;
+}
+
+.sidebar nav ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.sidebar nav ul li a {
+  display: block;
+  padding: 10px;
+  text-decoration: underline overline;
+  font-weight: bolder;
+  font-size:larger;
+  color: gray;/*old color #68f0fa*/
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.week-box {
+  /*border: 1px solid #ddd;*/
+  padding: 20px;
+  text-align: center;
+  background-color: gray; /* Your chosen general color */
+  position: relative; /* For positioning the link */
+}
+
+.week-box img {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove any default spacing around the image */
+  margin-bottom: 10px; /* Space between image and text */
+}
+
+.week-box a {
+  text-decoration: none;
+  color: white;
+}
+.week-box .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  color: white;
+  text-align: center;
+}
+
+.profile img {
+  width: 90%;
+  height: auto;
+  border-radius: 50%;
+}
+
+.profile h3{
+  text-align: center;
+  margin: 10px 0;
+  font-size:x-large;
+  font-weight:bolder;
+}
+.profile p{
+  text-align: left;
+  margin: 10px 0; 
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.social-links {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  /* You can add more styles here for icons or specific branding */
+}
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.social-links img {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.header {
+  text-align: center;
+  padding: 20px;
+  background-color: #fa7268; /* Background color for the header */
+}
+
+.top-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.top-nav ul li {
+  margin: 0 10px;
+}
+
+.top-nav ul li a {
+  text-decoration: underline overline;
+  color: white;
+}
+
+.main-content {
+  margin-top: 20px;
+  padding: 20px;
+  color: black
+}
+
+.column-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 4 equal columns */
+  grid-gap: 20px;
+}
+
+.column {
+  /* Add styles for individual columns */
+  padding: 20px;
+  color:white;
+  background-color: grey; /* Example background color */
+  /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+}
+
+.profile-img {
+  width: 100%;
+  height: auto;
+  border-radius: 50%; /* Circular image */
+}
+
+.week-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px; /* Space between containers */
+  padding: 20px;
+  background-color: grey; /* Example background color */
+}
+
+.img-left img, .img-right img {
+  display:inline-flex;
+  width: 25%;
+  margin: 10px;
+}
+
+.img-left .text-content, .img-right .text-content {
+  display:block;
+  width: 25%;
+  padding: 10px;
+}
+
+.img-left .text-content .p, .img-right .text-content .p{
+  display:block;
+  padding: 10px;
+}
+
+.img-right {
+  flex-direction: row-reverse; /* Reverses the order for image and text */
+}
+
+.text-center {
+  display:block;
+  text-align: center;
+  width:50%;
+  margin:auto;
+  padding: 20px;
+}
+
+.text-center .p {
+  display:block;
+  max-width: 600px; /* Adjust as needed */
+  margin:auto; /* Center the text block */
+}
