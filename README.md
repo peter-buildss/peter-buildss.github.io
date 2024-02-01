@@ -1,5 +1,7 @@
 # Peter Perez - Fab Academy documentation
 
+Right now this is a clone of my Fab Academy site, but will evolve into my personal website.
+
 Visit [fabacademy.org](https://fabacademy.org/) for class and other information.
 
 Good day and welcome to Peter Perez's Fab Academy Portfolio and more. Here we will be tracking my journey with the Moonlighter Fablab through this program. 
