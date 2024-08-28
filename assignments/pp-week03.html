@@ -5,32 +5,282 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="GitLab Pages">
     <meta name="description" content="Fab Academy documentation site for Peter Perez">
-    <title>Peter Perez- Fab Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Peter Perez- Fab Academy Week 03</title>
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header class="header">
       <h1>Peter Perez's Fab Academy Portfolio</h1>
+      <h1>Week 3: Computer Controlled Cutting</h1>
       <nav class="top-nav">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html">The Moonlighter</a></li>
-              <li><a href="final-project.html">Final Project</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About Me</a></li>
+            <li><a href="https://fabacademy.org/2024/labs/hopelab/">The Moonlighter</a></li>
+            <li><a href="../final-project.html">Final Project</a></li>
               <!-- Add other navigation links as needed -->
           </ul>
       </nav>
   </header>
-    <div class="content">
 
-      <h1>UNDER CONSTRUCTION</h1>
+  <div class="week-content text-center">
+    <h2>Week 3's Goals:</h2>
+    <ul>
+      <li>Group Assignment</li>
+      <ul>
+        <li>Characterize your lasercutter's focus, power, speed, rate, kerf, joint clearance and types.</li>
+        <li>Document your work to the group work page and reflect on your individual page what you learned.</li>
+      </ul>
+      <li>Individual Assignment</li>
+      <ul>
+        <li>Cut something on the vinyl cutter.</li>
+        <li>Design, lasercut, and document a parametric construction kit, accounting for the lasercutter kerf, which can be assembled in multiple ways.</li>
+      </ul>
+      <li>Tools Used</li>
+      <ul>
+        <li>Fusion360</li>
+        <li>Illustrator</li>
+        <li>Cricut</li>
+        <li>Cricut Make</li>
+        <li>Glowforge</li>
+        <li>Glowforge Web Software</li>
+      </ul>
+    </ul>
+  </div>
 
-      <p>Sorry the URL you typed does not exist, please use my navigation bar up top to browse my website.</p>
+  <div class="week-content text-center">
+    <h2>Group Assignment</h2>
+    <img src="../images/week03/lasertests.jpeg">
+    <p>We tested the vector cutting in a grid array that varied the Power intensity from 25 to 100 in 25 percent increments in the Y axis, and the speed from 25 to 100 in 25% increments in the X axis. We ran these tests on 1/8" basswood, 1/4" plywood, 1/16" corrugated cardboard, 1/4" corrugated cardboard, and 1/4" acrylic. We then ran a raster engraving test with the same power and speed variability on the Y and X axis, but increased it to show it in increments of 10% so we had a more preceise array of intensities.</p>
+    <p>I learned that a lot of different materials have similar properties when it comes to cutting through them in power and speed. But a big factor in this is the actual thickness. Higher power also causes more scorching so dialing that in is very very important when it comes to a clean outline.</p>
+</div>
 
+
+  <div class="week-content text-center">
+    <h1>Cutting something on the vinyl cutter</h1>
+    <p>Last week I redesigned something on Illustrator, my little buddy/logo for my company Perez Robotics LLC. Unfortunately, unlike DAP-R little buddy doesn't really have a name so we will just stick to Buddy for now. If you haven'y had a chance to look at Week 2. Here is a little reminder at what we are looking at:</p>
+    <a href="pp-week02.html">
+    <img src="../images/week02/Illustrator8.png"></a>
+    <p>If you'd like you can click above and see the process of creating him again!</p>
+    <p>But, I digress, making something like this is no use unless you can make a little bit of swag of it. So I did what any self respecting maker would do and made a vinyl decal of little buddy. At my home lab, the Roberto C. Goizueta Innovation Center, we have a Cricut Maker on site. Two of them actually. So my choice came down to using this as my CNC controlled cutter for vinyl. I know I can use a laser but we will be going over that process later with the press fit device.</p>
+    <p>Cricut is interesting in that it has a proprietary software for the processing of files. This is called Cricut Make. It is pretty simple. Drag and drop with some minor processing for something like we are doing today. However as you will see I ran into some snags.</p>
+    <div class="week-content img-left">
+    <img src="../images/week03/Vinyl/Vinyl01.jpg"> 
+    <img src="../images/week03/Vinyl/Vinyl02.jpg">
     </div>
+    <p>Uploading files is easy and it accepts most image file types. But the true strength of the program comes in when you use .svg file times. This allows the image colors to be differentiated into different cuts. Especially after being designed from scratch on Illustrator or a similar program.</p>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl03.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl04.jpg">
+    </div>
+    <p>Once brought in the image needs to be resized to something realistic that you would like to use for your final sticking place. Here I brought it down to something like 3 inches wide in the end so it would be a reasonable sticker size. If you look to the right of the screen you see the power of the svg. All of the different shapes that are in the design are brought in separately. That way you can cut and customize the design however you like. It is necessary (and makes your life a lot easier) when you group the images together so that they stay in their final orientation. If you do not do that they all arrange to best fit and then you have to move them yourself. This is no fun at all.</p>
+    <img src ="../images/week03/Vinyl/Vinyl06.jpg">
+    <p>I had to first ungroup all of the PerezRobotics images that were stacked together so that the grey and the blue are not one unit and then I had to attach together all of the blue detail shapes on the cutter.</p>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl07.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl08.jpg">
+    </div>
+    <p>Once you do that and export you can see that the two different colors break up into two different mats to cut. Aka, two different color vinyls. You can get creative and splice together vinyl sheets and do a lot more but I do not recommend it. I have tried. It's the biggest headache.</p>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl09.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl10.jpg">
+    </div>
+    <p>After this you pick which vinyl you want to use and I knew in the lab we had the proprietary Cricut "Premium Vinyl"</p>
+    <img src="../images/week03/Vinyl/Vinyl11.jpg">
+    <h2>Off to the Real World</h2>
+    <p>Now that I have set up the file and what I wanted it to do it is time to put together the actual cuts and see what colors we have. When I went to look it looked like I didnt have the blue and grey/silver that I originally designed it in. Looks like I am going to have to go Black and Red and do an "Evil Little Buddy"</p>
+    <img style="width:40%" src="../images/week03/Vinyl/Vinyl12.jpg">
+    <p>After this you lay the vinyl on the mat and set it into the machine. Make sure that where you put the vinyl lines up with where the design is on the sample mat. Then follow the on screen instructions to let it cut.</p>
+    <div class="week-content img-left">
+      <img style="width:40%" src="../images/week03/Vinyl/Vinyl13.jpg"> 
+      <video width="40%" controls>
+        <source src="../images/week03/Vinyl/Vinyl14.mp4" type="video/mp4">
+      </video> 
+    </div>
+    <p>Once this is done you have to start with the weeding process. As you can see in the video the entire vinyl is still on the page and the excess needs to be removed. I find this the most annoying part of the process because a small mistake can make it so that your design does not come off easily. I actually almost messed up and you can see that in the second image below where the little "X" eye almost came apart!</p>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl15.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl16.jpg">
+    </div>
+    <p>When you are done weeding you will have one sheet of each color vinyl left behind with only what you want. Here, you are supposed to used transfer paper to move the image from its current paper to another. I don't do that. I prefer something simpler: masking tape. I do not know why but this always works better for me and has given me good results since I started working with it. The trick is lining up your images properly. Only trick I know is to line it up, hold my breath, and commit.</p>
+    <div class="week-content img-left">
+      <img style="width:40%" src="../images/week03/Vinyl/Vinyl17.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl18.jpg">
+    </div>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl19.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl20.jpg">
+    </div>
+    <h2>Finally, we can add it to the infinite sticker collection</h2>
+    <p>The final step, and most fun is to put your attached images on their final resting place. I chose, as many do, my laptop. Now little buddy can go with me everywhere (I will probably make a few more after this now too). Once you have the masking tape ready, you can go ahead and place it in the final location. Rubbing the vinyl vigorously is what I do to have it stick well and then I gently peel off the masking tape. If all goes well it will stick to the place you want with good strength.</p>
+    <div class="week-content img-left">
+      <img src="../images/week03/Vinyl/Vinyl21.jpg"> 
+      <img src="../images/week03/Vinyl/Vinyl22.jpg">
+    </div>
+    <h2>The Final Product</h2>
+    <img src="../images/week03/Vinyl/Vinyl23.jpg"> 
+  </div>
+
+  <div class="week-content text-center">
+    <h2>Short Vinyl Debrief</h2>
+    <p>Below is the svg that I uploaded onto the Cricut Maker app</p>
+    <li><a href="../files/week03/PerezRobotics.svg">Perez Robotics svg</a></li>
+    <p>The Cricut and Cricut maker app are lenient on settings and great for beginners. As shown above you can choose the material you have and the program will set pressures and more automatically.</p>
+    <p>I got curious and looked into what the settings would be for the <strong>Cricut Premium Vinyl</strong> in this device. For the maker they are completely hidden but if you look <a href="https://help.cricut.com/hc/en-us/articles/360009558333-Premium-Vinyl-Removable-Cutting-and-application-instructions">at this site</a> it looks like the settings in general are a "3" on depth. Which is a medium range for the 1-5 range of this machine and "Medium" pressure. So it seems like its the most standard of materials. I am not sure what makes it premium but it is a selling point I am guessing.</p>
+</div>
+
+
+  <div class="week-content text-center">
+  <h1>THE PRESS FIT PUZZLE ODYSSEY</h1>
+  <p>I will begin by saying the odyssey of this design is fraught with misreading instructions and headaches on headaches of design.</p>
+  <p>The long and short of it is, I designed something, it worked, I checked the requirements, I did it wrong, I had to redesign it. But the skills I learned along the way made it much better. Frankly, it made it easier too.</p>
+  <p>To begin this process I thought I just had to create a press-fit model. So to simplify my work I started designing a press fit lamp because that is what I wanted to do with my students at the school I work at daily.</p>
+  <p>In Fusion360 parametric design is done through constraints and parameters. These can be defined in two ways. First by adding them in prior using the User Parameters tool.</p>
+  <img src="../images/week03/PressFit/PressFit (1).jpg">
+  <p>Or by defining them directly when you define a parameter in your sketches.</p>
+  <p>Here I was defining <strong>LampHeight</strong> directly with the sketch.</p>
+  <img src="../images/week03/PressFit/PressFit (2).jpg">
+  <p>I sketched out the general idea for my lamp, a set of rings at parametrically defined distances that could stack on top of each other. These would have supporting beams to hold them together.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit (3).jpg"> 
+    <img src="../images/week03/PressFit/PressFit (4).jpg">
+  </div>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit (5).jpg"> 
+    <img src="../images/week03/PressFit/PressFit (6).jpg">
+  </div>
+  <p>Playing with the parameters allowed me to change the ring widths. And then create more interesting shapes in the design. In the end I only chose 2 ring widths but with the design here you can see all 3.</p>
+  <p>The next step was to <i>to create the slots for the legs to slot into</i></p>
+  <img src="../images/week03/PressFit/PressFit (11).jpg">
+  <p>The best part about this is that using the parameters I can change the number of legs that I will be working with easily.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit (12).jpg"> 
+    <img src="../images/week03/PressFit/PressFit (13).jpg">
+  </div>
+  <p>The legs were designed to be able to resize themselves (with a few limitations) when the rings were resized as well as the thickness of the material. Keeping things truly parametric.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit (15).jpg"> 
+    <img src="../images/week03/PressFit/PressFit (19).jpg">
+  </div>
+  <h2>Transitioning to Illustrator to cut</h2>
+  <p>After this I transitioned the images to illustrator to be able to send them to the laser cutter. The procedure to do so is pretty simple</p>
+  <ul><li>Exporting to Illustrator from Fusion:</li>
+    <ul>
+      <li>Export your sketches as a .svg file</li>
+      <li>Open Illustrator</li>
+      <li>Create an Artboard the size of your laser bed</li>
+      <li>Click File > Place</li>
+      <li>The image should appear on your screen and you can move it to where you want to.</li>
+    </ul>
+  </ul>
+  <p>In the end it will look like the images below:</p>
+  <img src="../images/week03/PressFit/PressFit (21).jpg">
+  <p>With the laser at the Moonlighter it is easy to connect to the cutter. All you have to do is be on the Wifi and type the local IP address of the tool onto your browser. It will open up an interface.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit (24).jpg"> 
+    <img src="../images/week03/PressFit/PressFit (25).jpg">
+  </div>
+  <p>In this interface it is simple, you shift your image to wherever it needs to be on the screen and you can use the program to shift each of the parts to a place where they fit.</p>
+  <p>It is good form to <strong>circle perimeter</strong> after this to be able to see where the laser is going to cut and if it makes sense with what you are building.</p>
+  <p>On the bottom right you can set your power and speed (as found when you characterized your laser) and then click <strong>Run</strong></p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit2 (1).JPG"> 
+    <img src="../images/week03/PressFit/PressFit2 (2).JPG">
+  </div>
+  <p>Then you sit and wait.</p>
+  <p>After this, I had an issue.</p>
+  <p>Upon printing and trying to put the thing together, I did not actually design them well or account for the kerf and I had the wobbliest lamp that man ever did see.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit2 (3).JPG"> 
+    <img src="../images/week03/PressFit/PressFit2 (5).JPG">
+  </div>
+  <p>So I went back and created a Kerf tester.</p>
+  <ul>
+    <li>Kerf Tester</li>
+    <ul>
+      <li>Create an array of holes.</li>
+      <li>Speaking to Daisy, she suggested to try 2% increments</li>
+      <li>So using the parameter I defined as the material thickness I multiplied this by increments of +/- .02</li>
+      <li>Then I cut and tested with the material</li>
+    </ul>
+  </ul>
+  <p>Turned out a size of 92% of the theoretical size worked best.</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit2 (6).JPG"> 
+    <img src="../images/week03/PressFit/PressFit2 (7).JPG">
+  </div>
+  <p>Then I recut the whole assembly slotting that in as my material thickness and tried to get it to slide in. It did, very well!</p>
+  <div class="week-content img-left">
+    <img src="../images/week03/PressFit/PressFit2 (9).JPG"> 
+    <img src="../images/week03/PressFit/PressFit2 (10).JPG">
+  </div>
+  <img src="../images/week03/PressFit/PressFit2 (11).JPG">
+  <h2>Now, we all see the problem</h2>
+  <p>I looked at the requirements, and noticed it had to be done in multiple parts... and something multi-configurable. And that lamp, is definitely not.</p>
+  <p>So instead I decided to use a little geometry and parameters and designed a polygon generator.</p>
+  <p>We all know that polygons can be created from a set of triangles that go through the center. All that differentiates them is their interior angle and height.</p>
+  <p>Something that looks like this:</p>
+  <img src="../images/week03/PressFit/PressFit3 (1).jpg">
+  <p>This worked out perfectly, but I forgot about changing the height of the triangle, so I ended up originally with something like this when I tried to pattern beyond 4 instances.</p>
+  <img src="../images/week03/PressFit/PressFit3 (2).jpg">
+  <p>So I had to go back and do the math mentioned above:</p>
+  <img src="../images/week03/PressFit/PressFitF2.png">
+<img src="../images/week03/PressFit/PressFit3 (6).jpg">
+<img src="../images/week03/PressFit/PressFitF.png"> 
+<p>With this I got a system that <strong>WORKED.</strong></p>
+<p>And most polygons would generate well!</p>
+<div class="week-content img-left">
+  <img src="../images/week03/PressFit/PressFit3 (3).jpg"> 
+  <img src="../images/week03/PressFit/PressFit3 (4).jpg">
+</div>
+<img src="../images/week03/PressFit/PressFit3 (5).jpg">
+<h2>Cutting again.</h2>
+<p>I followed the same procedure as above and this time instead I did it on my work glow forge.</p>
+<p>I also learned from before and created my sizing tool immediately and then cut out my kit. I think it came out pretty well!</p>
+<div class="week-content img-left">
+  <img src="../images/week03/PressFit/PressFit4 (1).JPG"> 
+  <img src="../images/week03/PressFit/PressFit4 (2).JPG">
+</div>
+<div class="week-content img-left">
+  <img src="../images/week03/PressFit/PressFit4 (3).JPG"> 
+  <img src="../images/week03/PressFit/PressFit4 (4).JPG">
+</div>
+
+<div class="week-content text-center">
+  <h2>A few things on the laser cutter</h2>
+  <p>For this test I used two materials for testing and for the final product. The testing for this material was done on <a href="https://www.amazon.com/Basswood-Crafts-12-Surfaces-Unfinished-Architectural-Staining/dp/B0BK8YSWKW/ref=sr_1_5?crid=1APVH7Y044VVR&dib=eyJ2IjoiMSJ9.eN7geQBm0xjqdrQFx41-gIcaC0i4m9mcFu6-tcVp44A4PI0UPkR987yhL9MHlRS7Q8maoSpTD5I9FpH8zecvffMxNW__F1ThUpYUxnx4G8o6wlyUK71gLoFmeI442BXid3470AD1GfiDcErai1tkFm0wc1UftFNn_9GL22ehikekTas2P2ghNWH_hKABLv--XiCDpBAdIBJlnwT_Snl2Yp8ruRz3f3nmnORPxTexqF5xZjVqJaIVXqos2uKCM5o4uJs-9YlGilrObRFqcL-K15HrSDAZ4UDcIYkeMpPI8Ys.1K1iUasb8o4xFmwrNbEBgWlrXQyib9N2if3jLXsu_NA&dib_tag=se&keywords=laser%2Bcutter%2Bplywood&qid=1719343855&sprefix=laser%2Bcutter%2Bplywood%2Caps%2C109&sr=8-5&th=1">1/8" basswood</a></p>
+  <p>On the laser cutter the settings for cutting were a Power of 100% and a speed of 500 out of 1000 on the program.</p>
+  <ul>
+    <li>The files:</li>
+    <ul>
+      <li><a href="../files/week03/ParametricKit v7.f3d">The Parametric Fusion File</a></li>
+      <li><a href="../files/week03/PressFit3side.dxf">3 side dxf</a></li>
+      <li><a href="../files/week03/PressFit4side.dxf">4 side dxf</a></li>
+      <li><a href="../files/week03/PressFit5side.dxf">5 side dxf</a></li>
+    </ul>
+  </ul>
+  <p>If you want more sides you can dl the Fusion file and change the parameters</p>
+
+</div>
+
+
+<h1>What I Learned This Time</h1>
+<li>Vinyl cutting is fun, but you have to pay close attention to your design</li>
+<li>On a cricut remember about group and arrange</li>
+<li>Group just puts different shapes together.</li>
+<li><strong>Arrange</strong> groups together images in their orientation, making it MUCH easier to arrange your designs later</li>
+<li>Masking tape works just as well as transfer tape for moving vinyl</li>
+<li><strong>KERF IS SO IMPORTANT FOR PRESS FIT</strong></li>
+<li>Parametric design on Fusion is not perfect. Regeneration after changes can have a lot of problems</li>
+<li>Remember your basic geometry when designing these constraints too.</li>
+<li>These puzzles are really fun to make and I kind of want to generate a huge set of them!</li>
+<li>Ohad, our mentor, taught me about <strong>cleaning the collimator</strong> on my Glowforge and how it will fix my scorching. I am on my way to doing this now. You can just use degreaser but <strong>Oxyclean or detergent works too!</strong></li>
+
+
+  </div>
 
     <footer>
-      <p>Copyright 2023 Peter Perez; - Creative Commons Attribution Non Commercial </p>
+      <p>Copyright 2024 <strong>Peter Perez</strong>; - Creative Commons Attribution Non Commercial </p>
       <p>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/peter-perez">fabcloud/fabacademy/2024/peter-perez</a></p>
     </footer>
   </body>

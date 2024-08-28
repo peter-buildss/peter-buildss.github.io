@@ -5,32 +5,141 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="GitLab Pages">
     <meta name="description" content="Fab Academy documentation site for Peter Perez">
-    <title>Peter Perez- Fab Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Peter Perez- Fab Academy Week 4</title>
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header class="header">
       <h1>Peter Perez's Fab Academy Portfolio</h1>
+      <h1>Week 04: Electronics Production</h1>
       <nav class="top-nav">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html">The Moonlighter</a></li>
-              <li><a href="final-project.html">Final Project</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About Me</a></li>
+              <li><a href="https://fabacademy.org/2024/labs/hopelab/">The Moonlighter</a></li>
+              <li><a href="../final-project.html">Final Project</a></li>
               <!-- Add other navigation links as needed -->
           </ul>
       </nav>
   </header>
-    <div class="content">
+  <div class="week-content text-center">
+    <h2>Week 4's Goals:</h2>
+    <ul>
+      <li>Group Assignment</li>
+      <ul>
+        <li>Characterize the design rules for your in house PCB production process</li>
+        <li>send a PCB out to a board house</li>
+      </ul>
+      <li>Individual Assignment</li>
+      <ul>
+        <li>make and test a microcontroller development board</li>
+      </ul>
+      <li>Tools Used</li>
+      <ul>
+        <li>Adobe Illustrator</li>
+        <li>Bantam Tools PCB Milling Machine</li>
+        <li>Bantam Tools - Software</li>
+        <li>Soldering Iron</li>
+        <li>SEEED XIAO</li>
+      </ul>
+    </ul>
+  </div>
 
-      <h1>UNDER CONSTRUCTION</h1>
+  <div class="week-content text-center">
+    <h1>Group Assignment</h1>
+    <h3>Sending a PCB to mill in a mill shop</h3>
+    <p>If you follow youtube there are many different PCB milling houses that you can send your designs to and get them milled for a few dollars a board. If you have the time and a well prototyped board you definiely can send your things there and have a great repeatable and much easier to solder product. But learning the milling process allows for great leaps in prototyping. Considering I had not learned how to design a board yet I used the Quentorres board supplied to us to order.</p>
+    <p>Originally I tried to upload the Quentorres to pcbway but for some reason I was having difficulty so instead I went to jlcpcb and had a much easier time of it!</p>
+    <img src="../images/week04/wk4grp/JLC1.png">
+    <p><strong>Step One:</strong> Download the gerber files for your circuit. If you are in KiCAD you need to export them, but since we are using QuenTorres we just download it from the site.</p>
+    <p>The files should look something like this:</p>
+    <img src="../images/week04/wk4grp/JLC2.png">
+    <p><strong>Step Two:</strong> Zip up the folder with the gerber files. JLC only accepts .zip files so just make sure to compress all into a zip and upload it onto the website.</p>
+    <p>You will then be given a ton of options!</p>
+    <img src="../images/week04/wk4grp/JLC3.png">
+    <p>Here I kept it all default, but I was very tempted to change the color of the board to a purple since it was closest to Moonlighter Pink.</p>
+    <p>You can even order a stencil to make your soldering easier but I opted out of that.. Probably should have purchased it.</p>
+    <img src="../images/week04/wk4grp/JLC4.png">
+    <p>After that you can choose a lead time, I kept it standard. But for 5 boards it would be $2. I ordered 10</p>
+    <img src="../images/week04/wk4grp/JLC5.png">
+    <p>After about a week or so I received my boards in the mail. The quality was much better than I expected and will definitely be ordering again.</p>
+    <img src="../images/week04/wk4grp/JLC6_1.jpeg">
+    <h3>Characterizing PCB Mill</h3>
+    <p>As said below we used the Discontinued Bantam Tools PCB Mill for our PCB milling.</p>
+    <p>To upload the files onto the program you need to extract the Gerber files just from wherever you sourced them. Then you use the bantam tools PCB Milling Software that looks a little like this:</p>
+    <img src="../images/week04/wk4grp/Bantam1.png">
+    <p>Once the program opens you have to set up the board size that you are using. I have found it is VERY important to measure out the boards exactly as there are many manufacturing differences between one and the other.</p>
+    <p>When the board settings are in you have to upload the gerber files and it is very important to pick 3 specific files to get a good board those are the: <strong>F_Cu</strong> file or the front copper. The <strong>Edge_Cuts</strong> which determines the edge of the board and the <strong>PTH</strong> file which has all the drills through the board!</p>
+    <img src="../images/week04/wk4grp/Bantam2.png">
+    <p>For these boards we used two different end mills: <strong>the 1/64" and 1/32" flat end mills</strong>. These came out with excellent definitition even for small gaps between parts on the board.</p>
+    <p>This software is excellent because it automatically has all the settings for each of the mills you are working with. Down to the frequency of the spinning, the movelment of the bit and more. I can say however with small bits like this it is incredibly nervewracking to let it go through as they are expensive and break super easily.</p>
+    <img src="../images/week04/wk4grp/Bantam3 32.png">
+    <img src="../images/week04/wk4grp/Bantam4 64.png">
+    <p>Once those settings are in you can set the depth of your cuts. This is something we struggled with initially.</p>
+    <img src="../images/week04/wk4grp/Bantam5 Files.png">
+    <p>In this case a depth of .15 mm always worked for the boards we were working with.</p>
+  </div>
 
-      <p>Sorry the URL you typed does not exist, please use my navigation bar up top to browse my website.</p>
-
+  <div class="week-content text-center">
+    <h1>Well I <italics>thought</italics> this would be easy...</h1>
+    <h2>Milling a Circuit</h2>
+    <p>This week we were tasked with milling a circuit. Last week's class held a lot of warnings from Neil that had to do with the work being done. Millings bits would break, specifications are precise, etc. And honestly all of the above happened and more.</p>
+    <p>Keeping it simple I decided to work on the same circuit that was proposed to us:</p>
+    <a href="https://gitlab.fabcloud.org/pub/programmers/quentorres"><h3>The QuenTorres Microcontroller Development Board</h3></a>
+    <p>The files were given to us so we decided to go for a run. In the lab at the Moonlighter we had a <a href="https://www.digikey.com/en/product-highlight/b/bantam-tools/desktop-pcb-milling-machine">Bantam Tools PCB milling machine</a>. Actually a discontinued model but I will say when it gets working it does the job well. It mills beautifully and autoprobes so you dont have to worry about offsets (mostly) among other things.</p>
+    <img src = "../images/week04/Electron (1).JPG">
+    <p>The idea was to use the png images to the Bantam Tools cutter and then cut the board, easy peasy. But we ran into our first issue right there, the Bantam tools software does not take pngs, it takes svg files. This made us convert the images to svg's in Illustrator. There may be easier programs but that is the one we knew.</p>
+    <p>The process to do this conversion is pretty simple.</p>
+    <ul>
+      <li>Open the png in Illustrator</li>
+      <li>Go to Window>Image Trace</li>
+      <li>Click on the advanced drop down and click Ignore white</li>
+      <li>Click Expand</li>
+      <li>This will make the image into a vector ignoring the white for the Bantam Tools Software</li>
+    </ul>
+    <p>If you do not follow this process while using the tool you will get an image like below. Milling out EVERYTHING</p>
+    <img src="../images/week04/Electron2 (2).png">
+    <p>If you do it right you will get an image like this:</p>
+    <img src="../images/week04/Electron2 (3).png">
+    <p>Yay the traces are there and we can send it to the mill! Which we did and ended up with a pretty good product, except there was one issue, we were missing the holes.</p>
+    <div class="week-content img-left">
+      <img src="../images/week04/Electron (5).JPG">
+      <img src="../images/week04/Electron (6).JPG">
     </div>
+    <p>We followed the same process as before to alter the holes image but there was an issue, it created a file created holes, but not in the right position. So we had to play with tools inside of the Bantam software to move it to where it went as best as we could. As you can see, this did not work well</p>
+    <p>This led to a lot of trial and error eventually having us to try to open the Gerber file. Which worked beautifully.</p>
+    <img src="../images/week04/Electron3.png">
+    <h2>The Difficulties of Milling</h2>
+    <p>From here we thought it would be a done deal. Click mill, change tools, let it work. We were very wrong. Unfortunately we ended up breaking 5 mill tools and cutting a bit into our board due to characterizing our machine a bit too late.</p>
+    <img src="../images/week04/Electron (10).JPG">
+    <p>After all the tries you see above we finally got a good product and started milling the ones we needed for the lab</p>
+    <img src="../images/week04/Electron (12).JPG">
+    <p>We cleaned the chip with soap and water and got to soldering</p>
+    <h2>Big Hands Small Solder</h2>
+    <p>I was experienced in soldering but this was the first time I used surface mount parts by hand. And I will say I had the hardest time getting them on. And spoiler, I will be remaking this board soon because I do not like how it turned out.</p>
+    <div class="week-content img-left">
+      <img src="../images/week04/Electron (14).JPG">
+      <img src="../images/week04/Electron (15).JPG">
+    </div>
+    <p>The biggest issue was that I melted one of the leads off in this section.</p>
+    <img src="../images/week04/Electron (16).JPG">
+    <p>But luckily the circuit works!</p>
+    <img src="../images/week04/ELECTRON4.gif">
+</div>
 
+<div class="week-content text-center">
+  <h3>Things I learned</h3>
+  <ul>
+    <li>Milling. Bits. Are. Fragile.</li>
+    <li>Seriously that 1/64 bit gives me anxiety.</li>
+    <li>Making sure that your board is well adhered to the milling plate is super important if not it will lift off and you have a failed board.</li>
+    <li>Make sure to clean your machine after each cut. Particulate causes problems.</li>
+    <li>PCB houses are very affordable if you're trying to mass produce</li>
+    <li>Using the png allows you to have an easier method to upload a file but the convenience and information in gerber files make much cleaner boards</li>
+  </ul>
+</div>
     <footer>
-      <p>Copyright 2023 Peter Perez; - Creative Commons Attribution Non Commercial </p>
+      <p>Copyright 2024 Peter Perez; - Creative Commons Attribution Non Commercial </p>
       <p>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/peter-perez">fabcloud/fabacademy/2024/peter-perez</a></p>
     </footer>
   </body>

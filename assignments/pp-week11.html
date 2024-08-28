@@ -6,31 +6,110 @@
     <meta name="generator" content="GitLab Pages">
     <meta name="description" content="Fab Academy documentation site for Peter Perez">
     <title>Peter Perez- Fab Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header class="header">
       <h1>Peter Perez's Fab Academy Portfolio</h1>
+      <h1>Week 11: Input Devices</h1>
       <nav class="top-nav">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html">The Moonlighter</a></li>
-              <li><a href="final-project.html">Final Project</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About Me</a></li>
+              <li><a href="https://fabacademy.org/2024/labs/hopelab/">The Moonlighter</a></li>
+              <li><a href="../final-project.html">Final Project</a></li>
               <!-- Add other navigation links as needed -->
           </ul>
       </nav>
   </header>
-    <div class="content">
 
-      <h1>UNDER CONSTRUCTION</h1>
+  <div class="week-content text-center">
+   <h2>Group Project</h2>
+   <p>For the input group project we decided to test two of our inputs for our final projects. The first is a Hall Sensor that has a just digital input and the second is a distace sensor with an I2C input</p>
+   <p>The Hall sensor looks something like the LED from our probing of the microcontroller earlier. When it is high it just outputs a high value 3.3V and when it is low it just outputs zero.</p>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/KjBlO2gipMQ" title="Hall Sensor Input" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-      <p>Sorry the URL you typed does not exist, please use my navigation bar up top to browse my website.</p>
+   <p>The distance sensor working in I2C is a bit weirder, for some reason it outputs an indiscernable signal with peaks and valleys. It is nothing like the PWM of the servo that week. I tested both the Data and Clock pins on that and the same output occured.</p>
 
-    </div>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/Pbq0BCYdffc" title="I2C Input" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>Seeing this showed me there are simple and complex input devices in these embedded circuits and it can be difficult to discern them. These were also run with no code just using the milled circuit as a power and ground source to run the modules.</p>
+
+</div>
+
+
+  <div class="week-content text-center">
+    <h1>Another Revival of an Old Project - Mu Vision Sensor</h1>
+    <p>So I started this project with the goal of having my robot see someone and react to their presence either by speaking or having some sort of nonverbal communication. The goal was to use an ESP32 SEEED Sense board, with the onboard camera to make decisions with what we are doing. So I started the way any one would, going straight to reddit and asking if the board I purchased would work without using the online sensing demo. And I got one very funny, but very succinct answer:</p>
+    <img src="../images/week11/NotTheBoard.jpg">
+    <p>So I did what any self respecting tinker would do, I thanked the kind passer by, googled furiously for another hour and concluded that they are correct.</p>
+    <p>Having accepted my fate, I delved in and hunted for another solution when I noticed that I had something in my parts backlog that already MAY solve this problem. A long time ago I was looking to build a robot with my hobby time and my Youtube journeys brought me to this video:</p>
+
+    <!-- Youtube Video - Vision Sensor Original Video -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/4z2f5RIKvak" title="Mu Vision Sensor" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <p>To make a long story short, I never made that robot. But I did have the parts lying about, so I decided to take matters into my own hands and get this chip working for me for this project.</p>
+    <h2>The Sensor</h2>
+    <p>The Mu Vision sensor is a pre trained board that according to the website can detect balls, people, and other objects. So since I just want simple detection I believed that this would work in an excellent way.</p>
+    <img src="https://image.dfrobot.com/image/data/SEN0314/1.jpg">
+    <p>To make this sensor work I followed the steps in the video above. The first being, upload the vision sensor library.</p>
+    <a href = "https://github.com/DFRobot/DFRobot_MuVisionSensor"><img src="../images/week11/MuVisionLibrary.png"></a>
+    <p>The library can be found at this link:</p>
+    <ul>
+      <li><a href="https://github.com/DFRobot/DFRobot_MuVisionSensor">Mu Vision Library</a></li>
+    </ul>
+    <p>It is easy to install as all you do is download the library and unzip the file. Once you unzip it drop it into the "libraries" folder of your Arduino library. In my case all of this is in documents.</p>
+    <h2>Running the Test program</h2>
+    <p>So once you finish installing this library to your Arduino program you have to have some code to run. Luckily, the sensor comes with some example code to make your life easier. When you go into Arduino and go to <strong>File>Examples>MuVisionSensorIII</strong> you find some great code which in this case I wanted to run the "body" code to find a person.</p>
+    <img src="../images/week11/ExampleRun.png">
+    <p>The code uploaded I was able to compile it and run the default settings for the Mu Vision board. While compiling it does show a note:</p>
+    <img src="../images/week11/ArchitectureWarning.png">
+    <p>I decided to ignore this because sometimes things just work. And when I did a google search nothing came back warning against the use of this board. So in doing this I went ahead and ran the code. Sadly. This was not one of those times when everything just kinda works out...</p>
+    <h2>The error</h2>
+    <p>I was met with this error:</p>
+    <img src="../images/week11/TheError.png">
+    <p>With this I tried ot rewrite the mode, change how it was connected, and a few other things, but in the end nothing worked. I will be trying this on a pure Arduino board to see if that works next. I hope it works but will be sad if that fixes the problem because I cannot use an arduino for my robot the way I want it to work. Will update tomorrow.</p>
+    <h2>Checking if it works at all with Arduino</h2>
+    <img src="../images/week11/ArduinoConnect.JPG">
+    
+    <p>Because of the warning I received on the unit I brought out one of my old Arduino to be able to see if it was true and the libraries worked on those chipsets properly. After hastily plugging it in I uploaded the code to the system and crossed my fingers.</p>
+     <!-- Youtube Video - Vision Sensor Blinking -->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/V3cSma2AB7E" title="Mu Vision Sensor Blinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     <p>I got a very good outcome already in that the system was blinking more than it normally was before where it was a dead chip. Taking this into consideration I crossed my fingers and checked the serial output.</p>
+    <h2>Success!</h2>
+     <!-- Youtube Video - Vision Sensor Success -->
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/T62yXv8yoiM " title="Mu Vision Sensor Blinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+     <p>I recorded this video while leaning back and forth putting my face into the location of the sensor and it would read and not read depending if I was in the range of the sensor.</p>
+
+     <ul>
+      <li>Things to do:</li>
+      <ul>
+        <li>Figure out if the vision sensor works on another chipset</li>
+        <li>If it does not, find another vision sensor</li>
+        <li>Find an input to keep the robot from falling off of tables.</li>
+      </ul>
+     </ul>
+
+</div>
+
+<div class="week-content text-center">
+  <h2>Letting DAP-R Detect a Person</h2>
+  <p>This week I worked on having DAP-r see using a Mu Vision Sensor. I got this system to work but unfortunately it needed a Arduino microcontroller and I do not want to use that so I am back to the drawing board soon.</p>
+  <img src="../images/week11/IMG_8174.JPEG">
+  <!-- Youtube Video - Vision Sensor Success -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/T62yXv8yoiM " title="Mu Vision Sensor Blinking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  <p>Unfortunately the Mu Vision sensor you see in this video is only capable of working with the Arduino architecture and its libraries cannot work with the RP2040. So I had to look around and find a person sensor module that can communicate with the RP 2040.</p>
+  <p>In my searches I stumbled across the <a href="https://www.sparkfun.com/products/21231"> "Person Sensor"</a> from sparkfun. This one is capable of speaking with any board and uses the I2C framework to communicate with the system.  This one is programmed using the libraries here in the <a href="https://github.com/usefulsensors/person_sensor_docs/blob/main/README.md">Person Sensor GitHub page.</a></p>
+  <img src="../images/final-proj/SEN-21231-Person-Sensor-Feature.jpg">
+  <p>The system detects almost exactly like the Mu Vision sensor, but it can detect more than one person. It then sets up a bounding box around them. It also has a handy light that goes off when it is detecting a person or not, pictured below.</p>
+
+</div>
+
 
     <footer>
-      <p>Copyright 2023 Peter Perez; - Creative Commons Attribution Non Commercial </p>
+      <p>Copyright 2024 Peter Perez; - Creative Commons Attribution Non Commercial </p>
       <p>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/peter-perez">fabcloud/fabacademy/2024/peter-perez</a></p>
     </footer>
   </body>

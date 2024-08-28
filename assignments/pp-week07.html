@@ -6,31 +6,160 @@
     <meta name="generator" content="GitLab Pages">
     <meta name="description" content="Fab Academy documentation site for Peter Perez">
     <title>Peter Perez- Fab Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header class="header">
       <h1>Peter Perez's Fab Academy Portfolio</h1>
+      <h1>Week 07: Computer Controlled-Machining</h1>
       <nav class="top-nav">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html">The Moonlighter</a></li>
-              <li><a href="final-project.html">Final Project</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About Me</a></li>
+              <li><a href="../https://fabacademy.org/2024/labs/hopelab/">The Moonlighter</a></li>
+              <li><a href="../final-project.html">Final Project</a></li>
               <!-- Add other navigation links as needed -->
           </ul>
       </nav>
   </header>
-    <div class="content">
+  <div class="week-content text-center">
+    <ul>
+      <ul>
+        <li>Group Assignment</li>
+        <ul>
+          <li>Complete your lab’s safety training</li>
+          <li>Test runout, alignment, fixturing, speeds, feeds, materials and toolpaths for your machine</li>
+        </ul>
+        <li>Indivudual Assignment</li>
+        <ul>
+          <li>Make (design+mill+assemble) something big</li>
+        </ul>
+      </ul>
+    </ul>
+  </div>
 
-      <h1>UNDER CONSTRUCTION</h1>
+  <div class="week-content text-center">
+    <h1>Group Assignment</h1>
+    <p>The first thing to do was to take the safety training for the lab. Since we provide the training ourselves we followed a simple OSHA training for the CNC machine. This video is a good summary of the training.</p>
+    <iframe width="720" height="405" src="https://www.youtube.com/embed/1YhOKtyIa68" title="CNC Training Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>But there are a few sparknotes for the program:</p>
+    <ul>
+      <li>Wear Eye protection, goggles that cover the side of your eyes too</li>
+      <li>Wear hearing protection, rated to the sounds of your machine</li>
+      <li>Wear closed toed shoes</li>
+      <li>Do not wear anything on your wrists or loose clothing (ties etc)</li>
+      <li>Be trained on the use of your machine, and only use machines you are trained on</li>
+      <li>Stay near the machine</li>
+      <li>Be aware of the cutting and use the emergency stop if needed.</li>
+    </ul>
+    <p>Once that training was completed then it was time to test the machines.</p>
+    <h2>The Shopbot Desktop MAX</h2>
+    <img src="../images/week07/DT2MAX_AluminumDeck_800x500.png">
+    <p>In general I was using this machine here. A smaller CNC it is a great tool for cutting smaller projects and surprisingly robust.</p>
+    <p>As a toolhead, in general, I was using a 1/4in flat end mill. This leads to very consistent cuts and has not failed me in past projects.</p>
+    <p>Using this device started the same every time. Before the machine was set up I ran an x/y zero routine that boxed the machine properly and then levelled the z axis using the plate and clamp method attached.</p>
+    <p>The machine works best with the 1/4 in bit cutting externally to designs instead of internally.</p>
+    <p>The suction is somewhat lacking and wearing breathing protection is very encouraged and we decided to upgrade our dust collection after this.</p>
+    <p>Toolpath set up is easy if you have a <strong>dxf file</strong></p>
+    <p>The machine comes with VCarve pro. And it is used to preset for the device. As long as you precisely measure the thickness of your wood you have an easier time with the milling of the projects.</p>
+    <img src="../images/week07/BigCNC (3).jpeg">
+    <p>This program exports an .sbp file and that is what is uploaded into the comptuer that is running the Shopbot software. Normal it runs each toolpath several times and can cut totally through the board, leaving tabs if you wanted.</p>
+    <img src="../images/week07/BigCNC (5).jpeg">
+    <p>Aside from other issues it is very easy to get this working and running.</p>
+</div>
 
-      <p>Sorry the URL you typed does not exist, please use my navigation bar up top to browse my website.</p>
+<div class="week-content text-center">
+  <h1>The frame of an apothecary cabinet</h1>
+  <p>I am sure that like all makers I have way too many small parts. Small parts everywhere and I thought what would be a good and elegant way of storing this? Using the standard plastic cubbies is not so aesthetically pleasing, so I wanted to try my hand at building a start for an apothecary's cabinet. Basically a set of cubbies.</p>
+  <p>The workflow for this is simple, or well I chose a workflow simple to me:</p>
+  <ol>
+    <li>Design Cubby on Fusion 360</li>
+    <li>Export dxf files</li>
+    <li>Upload into Vcarve</li>
+    <li>Create toolpaths and export from VCarve as an .sbp</li>
+    <li>Cut</li>
+    <li>Assemble and Enjoy</li>
+  </ol>
+  <p>In designing this I was limited by the size of my CNC machine, which has a 24x36 inch bed. So with this in mind I chose to create a design that is about 34x20 inches in its largest dimension. This would be the back of the cabinet.</p>
+  <h3>Fusion 360</h3>
+  <p>I will not take you step by step through the design of this but in essence the Fusion file was created by making one of each board and repeating it in patterns until I got the design I wanted.</p>
+  <img src="../images/week07/BigCNC (19).jpeg">
+  <p>The final cabinet will look something like this:</p>
+  <img src="../images/week07/BigCNC 3.png">
+  <h3>Dogbones</h3>
+  <p>A dogbone in cnc is a small slot cut into the corners of teeth to join different parts together. They look something like the image below and make it a lot easier to push the pieces in because they remove any incongruencies in the size of the hole. </p>
+  <p>The problem is, you have to do this to every single tab you have in your design. And if you did overkill like I did, that is a lot of tabs. So I had to find a way to add dogbones more easily. This was remedied by using a quick google and finding that a dogbone add-in already was made for Fusion 360.</p>
+  <img src="../images/week07/Dogbone1.png">
+  <p>Installation is pretty simple and just follows a few steps in this website: </p>
+  <a href="https://tapnair.github.io/Dogbone/">Dogbone Add-in</a>
+  <a href="https://tapnair.github.io/installation.html">Dogbone Installation</a>
+  <p>Once that is in the system you very easily pull up the addins menu in Fusion, and run the addin to get it to add all the dogbones to your sketches. In my fusion file what I did was create a new component that holds all the dogboned sketches to make it a bit more organized and easier to find</p>
+  <img src="../images/week07/BigC1NC (21).jpeg">
+  <img src="../images/week07/Dogboneclose.png">
 
-    </div>
+  <p>As you can see clearly in this image, the add-in automatically adds a dogbone structure to each corner. The only thing that you do have to make sure to do is that any part that is in need of the dogbones will be on the xy plane of fusion. It is the limitation of the Dogbone add-in and leaves a messy final drawing in fusion. But it is so much better than doing all of them manually.</p>
+  <img src="../images/week07/Dogbone Fusion.png">
+  
+  <h3>Setting up Toolpaths</h3>
+  <p>The next step takes us straight to VCarve pro. Where you have to upload and create the toolpaths for each of the dxfs you created. In my case I had 5 dxfs since the designs are repeated. I have the top/bottom, the vertical shelves, horizonal shelves, side walls, and back.</p>
+  <p>I arranged these into the fewest workplanes that I could</p>
+  <img src="../images/week07/BigCNC (4).jpeg">
+  <p>For example in this image I set up three vertical shelves to be able to have the amount that I needed. The vertical shelves were shorter so I was able to fit more on one board.</p>
+  <p>It was very important to set a plunge depth that was appropriate for the wood and bit I had. I tend to do a little overkill and go into the spoilboard just to make sure I have a full cut</p>
+  <p>Once I exported the toolpaths, it was onto the machine</p>
+  <img src="../images/week07/BigCNC (14).jpeg">
+  <h2>Cutting the sides</h2>
+  <p>This was a very repetitive process that started with zeroing the machine and fastening the wood using the clamps we have that attach to the aluminum rails:</p>
+  <img src="../images/week07/BigCNC (12).jpeg">
+  <p>Then it was uploading the toolpaths on the control computer and running the cuts</p>
+  <img src="../images/week07/BigCNC (9).jpeg">
+  <img src="../images/week07/BigCNC (10).jpeg">
+  </div>
+
+<div class="week-content text-center">
+  <h1>Construction</h1>
+  <p>At this point I ran out of wood so I decided to put together the parts that I had and it looked something like this:</p>
+  <img src="../images/week07/BigCNC (13).jpeg">
+  <p>The help of a blow hammer and a 2x4 chunk to help distribute the force was the best thing that happened with the construction of this. Because of this I learned that I possibly had too little clearance for the construction of the device on the cnc and should have given myself a fraction of an inch of clearance so that things could slide in more easily.</p>
+  <p>However, I do like the tight fit that I had in this system once they were hammered in the pieces did not and would not budge one bit.</p>
+  <img src="../images/week07/IMG_8063 Medium.jpeg">
+  <p>I had to do a lot of post processing and sanding. Once I finished my design it ended up something like this:</p>
+  <img src="../images/week07/BigCNC (17).jpeg">
+  <p>I decided to remove one shelf to have a bit more room in the middle but I love how it came out. Now I am using it as storage at work and will probably make another better one soon!</p>
+</div>
+
+<div class="week-content text-center">
+  <h1>The Files</h1>
+  <ul>
+    <li><a href="../files/week07/FabAcademy Week7 Apothecary Cabinet v9.f3d">The Fusion 360 file</a></li>
+    <li><a href="../files/week07/TOPBTMPanel.dxf">Top/Bottom dxf</a></li>
+    <li><a href="../files/week07/SIDEPanel.dxf">Sides dxf</a></li>
+    <li><a href="../files/week07/HORIZONTAL LONG PANEL.dxf">Horizontal Shelf dxf</a></li>
+    <li><a href="../files/week07/VERTICALShortPanel.dxf">Vertical Shelf dxf</a></li>
+    <li><a href="../files/week07/BACKPanel.dxf">Big Back dxf</a></li>
+  </ul>
+</div>
+
+
+  <div class="week-content text-center">
+    <h1>What I learned:</h1>
+    <ul>
+      <li>Buy. Extra. Wood. Or do calculations precisely. I had to postpone the finishing of this project for a while because I ran out of MDF</li>
+      <li>MDF Basically disintigrates and is the dustiest thing ever. But it is cheaper than plywood right now so its why I chose it</li>
+      <li>A deadblow hammer and a 2x4 are great to convince things to settle in where they need to go</li>
+      <li>Be patient. These things take a while to cut, especially if there is more than one pass</li>
+      <li>Wear ear protection, when the vacuum and cnc is on it is horridly loud. I think my watch read 100+ db a few times.</li>
+      <li>Have sandpaper handy, it makes things easier to process.</li>
+      <li>Dogbones are awesome and now I want to redo my old arcade cabinet project because it would fit so much better.</li>
+      <li>Having a fresh mill on the end of the CNC is very important and would have saved me a lot of fluffy edges.</li>
+      <li>Arcades Pictured Below:</li>
+    </ul>
+    <img src="../images/week07/BigCNC (1).jpeg">
+
+</div>
 
     <footer>
-      <p>Copyright 2023 Peter Perez; - Creative Commons Attribution Non Commercial </p>
+      <p>Copyright 2024 Peter Perez; - Creative Commons Attribution Non Commercial </p>
       <p>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/peter-perez">fabcloud/fabacademy/2024/peter-perez</a></p>
     </footer>
   </body>

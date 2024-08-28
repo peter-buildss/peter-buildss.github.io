@@ -1,9 +1,10 @@
 body {
   text-align: center;
-  font-family: OCR A Std, monospace;
-  font-variant: small-caps;
-  color: white;
-  background-color: gray;
+  font-family: monospace;
+  font-size:x-large;
+  /*font-variant: small-caps;*/
+  color: black;
+  background-color: gainsboro;
 }
 
 .container {
@@ -18,7 +19,7 @@ body {
   position:sticky;
   top:10px;
   left:0px;
-  width: 400px;
+  width: 25%;
   height: fit-content;
   background-color: #fa7268;
 }
@@ -35,24 +36,25 @@ body {
   font-weight: bolder;
   font-size:larger;
   color: gray;/*old color #68f0fa*/
+  word-wrap:break-word;
 }
 
 .main-content {
   flex-grow: 1;
-  padding: 20px;
+  padding: 2%;
 }
 
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-gap: 2%;
 }
 
 .week-box {
   /*border: 1px solid #ddd;*/
-  padding: 20px;
+  padding: 2%;
   text-align: center;
-  background-color: gray; /* Your chosen general color */
+  background-color: gainsboro; /* Your chosen general color */
   position: relative; /* For positioning the link */
 }
 
@@ -65,7 +67,7 @@ body {
 
 .week-box a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 .week-box .overlay {
   position: absolute;
@@ -78,10 +80,19 @@ body {
   text-align: center;
 }
 
+/*starting below here is the side bar for nav*/
+
 .profile img {
   width: 90%;
   height: auto;
   border-radius: 50%;
+}
+
+.profile h2{
+  text-align: center;
+  margin-left: 2%;
+  margin-right: 2%;
+  word-wrap:break-word;
 }
 
 .profile h3{
@@ -118,6 +129,8 @@ body {
   width: 30px; /* Adjust the size as needed */
   height: auto;
 }
+
+/*Above here is the side bar for nav on the main page*/
 
 .header {
   text-align: center;
@@ -157,8 +170,8 @@ body {
 .column {
   /* Add styles for individual columns */
   padding: 20px;
-  color:white;
-  background-color: grey; /* Example background color */
+  color:black;
+  background-color: gainsboro; /* Example background color */
   /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
 }
 
@@ -171,27 +184,27 @@ body {
 .week-content {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin-bottom: 20px; /* Space between containers */
-  padding: 20px;
-  background-color: grey; /* Example background color */
+  justify-content: left;
+  margin-bottom: 2%; /* Space between containers */
+  padding: 2%;
+  background-color: gainsboro; /* Example background color */
 }
 
 .img-left img, .img-right img {
   display:inline-flex;
-  width: 25%;
+  width: 40%;
   margin: 10px;
 }
 
 .img-left .text-content, .img-right .text-content {
   display:block;
-  width: 25%;
-  padding: 10px;
+  width: 40%;
+  padding: 2%;
 }
 
 .img-left .text-content .p, .img-right .text-content .p{
-  display:block;
-  padding: 10px;
+  display:flex;
+  padding: 1%;
 }
 
 .img-right {
@@ -208,6 +221,24 @@ body {
 
 .text-center .p {
   display:block;
-  max-width: 600px; /* Adjust as needed */
+  width: 40%; /* Adjust as needed */
   margin:auto; /* Center the text block */
+}
+
+.text-center img{
+  width:80%;
+}
+.text-center li{
+  text-align: left;
+}
+
+pre {
+  text-align:left;
+  background-color: #333; /* Dark background */
+  color: #fff;            /* Light text */
+  padding: 15px;          /* Padding around the text */
+  border-radius: 8px;     /* Rounded corners */
+  overflow: auto;         /* Add a scrollbar if necessary */
+  font-family: monospace; /* Monospaced font for better readability */
+  font-size: 16px;        /* Adjust font size */
 }

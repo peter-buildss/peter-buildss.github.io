@@ -5,32 +5,130 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="GitLab Pages">
     <meta name="description" content="Fab Academy documentation site for Peter Perez">
-    <title>Peter Perez- Fab Academy</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Peter Perez- Fab Academy Week 09</title>
+    <link rel="stylesheet" href="../style.css">
   </head>
   <body>
     <header class="header">
       <h1>Peter Perez's Fab Academy Portfolio</h1>
+      <h1>Week 09 - Output Devices</h1>
       <nav class="top-nav">
           <ul>
-              <li><a href="index.html">Home</a></li>
-              <li><a href="about.html">About Me</a></li>
-              <li><a href="https://fabacademy.org/2024/labs/hopelab/students/thomas-pupo/moonlighterfablab.html">The Moonlighter</a></li>
-              <li><a href="final-project.html">Final Project</a></li>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About Me</a></li>
+              <li><a href="https://fabacademy.org/2024/labs/hopelab/">The Moonlighter</a></li>
+              <li><a href="../final-project.html">Final Project</a></li>
               <!-- Add other navigation links as needed -->
           </ul>
       </nav>
   </header>
-    <div class="content">
+  <div class="week-content text-center">
+    <h2>Week 9's Goals:</h2>
+    <ul>
+      <li>Individual Assignment</li>
+      <ul>
+        <li>Add an output device to a microcontroller board you've designed, and program it to do something</li>
+      </ul>
+      <li>Tools Used</li>
+      <ul>
+        <li>SEEED XIAO ESP32 Sense</li>
+        <li>Illustrator</li>
+        <li>Bitmap Converter Website</li>
+        <li>Arduino IDE</li>
+      </ul>
+    </ul>
+  </div>
 
-      <h1>UNDER CONSTRUCTION</h1>
+  <div class="week-content text-center">
+    <h1>Group Project</h1>
+    <p>We were asked for this week to check the power draw of a component. In our lab we were really not using any large power draw components except for the motor in Peter's DAPR so we decided to use that as our test case.</p>
+    <img src="../images/week09/IMG_8169.JPG">
+    <p>To measure this normally you would put a multimeter in series with the component and a power source and use it to measure the current draw. The equation that governs Power is:</p>
+    <p>P=I*V</p>
+    <p>or</p>
+    <p>Power = Current * Voltage</p>
+    <p>In this power source you can set your voltage and then it will read the current draw of the connected component.</p>
+    <img src="../images/week09/IMG_8171.JPG">
+    <p>So using this we connected the motor and ran it through different voltages, starting at 5V. This would be it's max power draw from the microcontroller and dropping it down to 0V to see what it's draws could be, you can see them dropping in this video here:</p>
 
-      <p>Sorry the URL you typed does not exist, please use my navigation bar up top to browse my website.</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZHoHrPMiBFQ" title="Motor Consumption" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+    <p>So running at 5V or just above our motor draws a current of 0.03A. When you plug that into the equation it looks something like this:</p>
+    <p>P = 0.03A * 5.0V</p>
+    <p>Solving</p>
+    <p>P = 0.15W</p>
+    <p>Not a big power draw and the robot is running on a 5000mAh battery meaning we can run this motor for a very very long time. </p>
+
+
+</div>
+
+  <div class="week-content text-center">
+    <h1>Making a Face for my DAP-R</h1>
+    <p>This week, unfortunately I was still waiting for some parts to get home from DigiKey so I had to make due with what I had at home. And that was namely a 128x64 pixel screen that I have been planning on using for my robot's face. </p>
+    <p>If you have been looking at my final project and assignments you can see a specific design I have for the face of my robot. One circle eye, one "X" eye and a happy demeanor. I wanted that to be part of the style of this final project so I had to figure out one important thing.</p>
+    <p>How do I do that?</p>
+    <h2>The SSD1306 I2C Screen</h2>
+    <img src="../images/week09/SSD1306.png">
+    <p>I bought these screens a while back because they were afforable and on Amazon for the low price of $7.99. Unfortunately I thought they would be a little bigger, but I like to make due with what I have. These also had a secondary advantage for this project, they only use 4 pins - 5V, GND, SCL and SDA.</p>
+    <p>This fact made it easier for me to connect it to my board and take advantage of the minimized footprint it had as compared to other screens I have found online with even more pins. So the first thing I did was connect it to my board. This time I started using the SEEED Studio Sense board that is based on an ESP32 instead of the RP2040 board that I have been using up to now. Because of this I have to change the pin outs that I am using to match where the I2C connectors are on my board. </p>
+    <img src="../images/week09/xiaotoscreenDiagram.png">
+    <p>I just got a few regular jumper cables, and got to work connecting that. With that the easy part was done. Now onto the hard part, the coding.</p>
+    <h2>How to code this?</h2>
+    <p>So, as any good maker does, I spend my time on youtube looking for other projects to work on and this idea was actually in the backburner for a while for me. So I decided to start on a video I had found a while ago.</p>
+
+    <h2>OLED Moving Eyes Tutorial by Vinnie Builds Stuff</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rb1CdDpUVDA" title="OLED Moving Eyes Arduino Tutorial" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <ul>
+      <li>Other important resources from this video:</li>
+      <ul>
+        <li><a href="https://github.com/Vin-X-Mod/OLED-Moving-Eyes-Arduino">OLED Moving Eyes Tutorial GitHub</a></li>
+        <li><a href="https://ctmprojectsblog.wordpress.com/2022/02/10/arduino-oled-eyes/">OLED Moving Eyes Wordpress</a></li>
+      </ul>
+    </ul>
+    <p>To be able to get to the point of getting this to work you have to not only set up your board like we have in the past few weeks. You need to add a few libraries to your Arduino program. These libraries are the Adafruit GFX Library and the Adafruit SSD1306 Library. </p>
+    <div class="week-content img-left">
+      <img src="../images/week09/AdafruitGFX.png">
+      <img src="../images/week09/Adafruit1306.png">
     </div>
+    <p>Once those are installed you can go ahead and install the sketch on the website that is called OLED Moving Eyes 3 Arrays</p>
+    <a href="https://github.com/Vin-X-Mod/OLED-Moving-Eyes-Arduino/blob/main/OLED_Moving_Eyes_3_Arrays.ino">Convenient link to the Sketch</a>
+    <p>If you do it right and upload it to your board, you will get something that looks like this:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8x36n7O0_sk" title="PP Week 09 Initial Upload" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>That is all fine and dandy, but I wanted to make something with MY face for my little guy so the tutorial actually goes into that too. And you have to start by making your own bitmaps for each frame in your animation.</p>
+    <h2>Over to Illustrator</h2>
+    <p>In Illustrator the first thing you need to do is create an artboard that is the size of your screen, in this case 128x64 px. Make sure your units are in pixels or you will be creating an ENORMOUS image for your tiny screen and there will be issues there, some I actually ran into.</p>
+    <img src="../images/week09/ArtboardSizeILU.png">
+    <p>Then you have to create the image that you wanted, in my case I already had the eyes so I brought them over and since the screen only shows one color I made the images black. All the black parts of the bitmap will light up in the image.</p>
+    <p>I wanted my robot to wink, because why not have it flirty to start, so I made a scene where his X eye winks by compressing the size and making it bigger. Eventually I ended up with a series of images like this:</p>
+    <img src="../images/week09/BitmapEyesOriginal.png">
+    <p><strong>Pay close attention to the white area around this because it is going to cause problems later</strong></p>
+    <h2>Converting the Images to C array</h2>
+    <p>Unfortunately, after making the images it is not as easy as just plopping them into the Arduino IDE. The code reads the images as a C array that looks something like this:</p>
+    <img src="../images/week09/C-Array.png">
+    <p>I could not and didn't want to cipher out how to do this by hand but luckily the tutorial provided me with a website to fix this problem: <a href="https://lvgl.io/tools/imageconverter">LVGL ONLINE CONVERTER</a></p>
+    <p>Here all you do is export your image as a bitmap and it will export the C array that you need. So I did just that using the following settings:</p>
+    <img src="../images/week09/LVGLSettings.png">
+    <p>Be careful to use those precise settings if not your images will come out far too large or in colors that the screen cannot understand</p>
+    <p>Once this is processed the output will come out as a .c file and when opened in note pad or a similar editor it will show up as such:</p>
+    <img src="../images/week09/LVGLOutput.png">
+    <p>Then you copy paste that into the code in each of the bitmap arrays and your output SHOULD work. I, however, had to make a few changes. But just for an update, this is what that looked like:</p>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/GHPDiNxIUec?" title="PP Week 09 First Fail" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <p>As you can see, the eyes were repeating too quickly and I did not know what to do. I tried to shift them around refresh the image differently, and do a few things until I had the idea of just making a bigger image that covered the whole size of the screen. This way, when the next image generated it would have to push the whole image out of the screen.</p>
+    <p>These made the eyes look much bigger but I did not mind what they ended up like. Before seeing the eyes in action, here is a sneak peek of the bitmaps:</p>
+    <img src="../images/week09/TheWink.png">
+    <h1>And the Final Product!</h1>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YZxPPH0s1as" title="PP Week 09 -OLED Eyes Perez Robotics Version" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
+<div class="week-content text-center">
+  <h2>The File</h2>
+  <ul>
+    <li><a href="../files/week09/OLED_Moving_Eyes_3_Arrays_DAPRVersion.ino">The DAPR Wink</a></li>
+  </ul>
+</div>
 
     <footer>
-      <p>Copyright 2023 Peter Perez; - Creative Commons Attribution Non Commercial </p>
+      <p>Copyright 2024 Peter Perez; - Creative Commons Attribution Non Commercial </p>
       <p>Source code hosted at <a href="https://gitlab.fabcloud.org/academany/fabacademy/2024/labs/hopelab/students/peter-perez">fabcloud/fabacademy/2024/peter-perez</a></p>
     </footer>
   </body>
