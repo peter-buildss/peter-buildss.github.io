@@ -1,56 +1,181 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Peter Perez Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peter Builds</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Favicon (PB hex) -->
+  <link rel="icon" href="images/branding/IMG_0165.JPG" />
+  <meta name="theme-color" content="#0b0b0c" />
 </head>
 <body>
-    <!-- Sticky Header Container -->
-    <div class="sticky-header">
-        <!-- Profile Section -->
-        <header class="profile-section">
-            <div class="profile-container">
-                <img src="images/ProfilePic.jpg" alt="Profile Picture" class="profile-image">
-                <div class="profile-details">
-                    <h1 class="site-title">Peter Perez</h1>
-                    <p class="tagline">Associate STEAM Director</p>
-                    <p class="degrees">B.S. Mechanical Engineering | M.S. Industrial Engineering</p>
-                </div>
-            </div>
-        </header>
+  <!-- Sticky Header -->
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <a class="brand" href="/" aria-label="Peter Builds home">
+        <!-- Wide wordmark in header -->
+        <img src="images/branding/IMG_0166.JPG" alt="Peter Builds wordmark" class="brand-logo" />
+        <span class="brand-text">Peter Builds</span>
+      </a>
 
-        <!-- Navigation Bar -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact-me.html">Contact</a></li>
-            </ul>
-        </nav>
+      <nav class="nav" aria-label="Primary">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">☀︎</button>
+      </nav>
     </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-        <section class="grid-container">
-            <!-- Placeholder grid items -->
-            <div class="grid-item"><a href="under-construction.html"><img src="images/newhome/PerezSiteIconsRobot.jpg" alt="111-P"></a></div>
-            <div class="grid-item"><a href="mentoredprojects.html"><img src="images/newhome/MentoredPracticumIcon.jpg" alt="Mentored Practicum"></a></div>
-            <div class="grid-item"><a href="fabacademyhome.html"><img src="images/newhome/FabAcademyIcon.jpg" alt="Fab Academy"></a></div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>© Peter Perez 2024</p>
-        <div class="social-links">
-            <a href="#"><i class="fa fa-linkedin"></i></a>
-            <a href="#"><i class="fa fa-github"></i></a>
-            <a href="#"><i class="fa fa-instagram"></i></a>
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Engineering educator & maker building useful, beautiful things.</h1>
+          <p class="lede">Associate STEAM Director • Robotics mentor • Digital fabrication nerd. This is the hub for projects, tutorials, and the <em>Peter Builds</em> brand.</p>
+          <div class="cta-row">
+            <a class="btn btn-solid" href="#work">View Projects</a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
         </div>
-    </footer>
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <div class="hero-right">
+          <!-- Mascot/mark variant in hero -->
+          <img src="images/branding/IMG_0164.JPG" alt="Peter Builds mascot" class="hero-portrait" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Work grid (keeps your original 3-card layout) -->
+    <section class="section" id="work">
+      <div class="container">
+        <h2 class="section-title">Featured Work</h2>
+        <div class="grid">
+          <a class="card" href="under-construction.html">
+            <img src="images/newhome/PerezSiteIconsRobot.jpg" alt="DAP-R Robot" />
+            <div class="card-body">
+              <h3>DAP-R Robot</h3>
+              <p>Personal robotics platform, CAD to control systems.</p>
+            </div>
+          </a>
+
+          <a class="card" href="assignments/mentoredprojects.html">
+            <img src="images/newhome/MentoredPracticumIcon.jpg" alt="Mentored Practicum" />
+            <div class="card-body">
+              <h3>Mentored Practicum</h3>
+              <p>Capstone guidance, shop workflows, and fabrication.</p>
+            </div>
+          </a>
+
+          <a class="card" href="fabacademyhome.html">
+            <img src="images/newhome/FabAcademyIcon.jpg" alt="Fab Academy" />
+            <div class="card-body">
+              <h3>Fab Academy</h3>
+              <p>Mini-projects in computer-controlled cutting, 3D, and more.</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section section-ink" id="about">
+      <div class="container">
+        <div class="split">
+          <div>
+            <h2 class="section-title">About Peter</h2>
+            <p>Miami-based engineer, teacher, and roboticist. I lead STEAM initiatives at Belen Jesuit and share open, practical builds for educators and makers.</p>
+            <ul class="bullets">
+              <li>B.S. Biomedical Eng (Mechanical); M.S. Industrial Eng</li>
+              <li>Fab Academy grad • FIRST mentor • Maker Faire Miami</li>
+              <li>Focus: accessible engineering, clean design, real utility</li>
+            </ul>
+          </div>
+          <div class="about-stats">
+            <div class="stat">
+              <span class="stat-num">10+ yrs</span>
+              <span class="stat-label">in engineering ed</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">100s</span>
+              <span class="stat-label">of student projects</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">ideas to build</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Contact</h2>
+        <form class="form" action="https://formspree.io/f/your-id" method="POST">
+          <div class="form-row">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" required />
+          </div>
+          <div class="form-row">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button class="btn btn-solid" type="submit">Send</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Peter Builds</p>
+      <div class="socials">
+        <a aria-label="LinkedIn" href="#">LinkedIn</a>
+        <a aria-label="GitHub" href="#">GitHub</a>
+        <a aria-label="Instagram" href="#">Instagram</a>
+        <a aria-label="YouTube" href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Theme toggle (default dark). Persist preference.
+    const root = document.documentElement;
+    const toggle = document.getElementById('themeToggle');
+    const stored = localStorage.getItem('theme');
+    if (stored) {
+      root.setAttribute('data-theme', stored);
+      toggle.textContent = stored === 'dark' ? '☀︎' : '☾';
+    } else {
+      root.setAttribute('data-theme', 'dark');
+      toggle.textContent = '☀︎';
+    }
+    toggle.addEventListener('click', () => {
+      const current = root.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      toggle.textContent = next === 'dark' ? '☀︎' : '☾';
+    });
+  </script>
 </body>
 </html>

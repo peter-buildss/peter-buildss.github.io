@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mentored Projects — Peter Builds</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css" />
+  <meta name="description" content="A living portfolio of student and community projects mentored by Peter Builds.">
+</head>
+<body>
+  <!-- Site Header (reuse from index) -->
+  <header class="sticky-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Peter Builds home">
+        <img src="IMG_0166.JPG" alt="Peter Builds wordmark" class="brand-logo" />
+        <span class="brand-text">Peter Builds</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html#work">Work</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Mentored Projects</h1>
+          <p class="lede">A modular log of builds I’ve coached—capstones, competitions, classroom challenges, and community collaborations. Duplicate any section below to document a new project quickly.</p>
+          <p> Most of these will be links to my student's own programmed websites and Github pages, please enjoy their work!</p>
+        </div>
+        <div class="hero-right">
+          <img src="../images/branding/IMG_0165.JPG" alt="PB hex icon" class="hero-portrait" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional project directory grid (quick links to details below) -->
+    <section class="section" id="directory">
+      <div class="container">
+        <h2 class="section-title">Directory</h2>
+        <div class="grid">
+          <!-- Duplicate these cards; point href to the project anchors below -->
+            <div class="card-body">
+              <h3>2026 - Xavi Blanchard</h3>
+              <a href="xib-arch.github.io"><p>Project Site</p></a>
+              <a href="github.com/xib-arch"><p>Github link</p></a>
+            </div>
+
+            <div class="card-body">
+              <h3>2026 - Sebastian Cacchione</h3>
+              <a href="Johnnywalker100.github.io"><p>Project Site</p></a>
+              <a href="github.com/JohnnyWalker100"><p>Github link</p></a>
+            </div>
+
+            <div class="card-body">
+              <h3>2026 - Rafael Castro</h3>
+              <a href="rcastro0303.github.io"><p>Project Site</p></a>
+              <a href="github.com/JohnnyWalker100"><p>Github link</p></a>
+            </div>
+
+
+
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Peter Builds</p>
+      <div class="socials">
+        <a aria-label="LinkedIn" href="#">LinkedIn</a>
+        <a aria-label="GitHub" href="#">GitHub</a>
+        <a aria-label="Instagram" href="#">Instagram</a>
+        <a aria-label="YouTube" href="#">YouTube</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
